@@ -12,13 +12,13 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center">
+      <section className="relative min-h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <EditableImage contentKey="heroImage" alt="Hero Background" className="w-full h-full" />
           <div className="absolute inset-0 bg-secondary/60"></div>
         </div>
         
-        <div className="relative z-10 container mx-auto px-4 text-center">
+        <div className="relative z-10 container mx-auto px-4 text-center py-20">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-md">
             <EditableText contentKey="heroTitle" />
           </h1>

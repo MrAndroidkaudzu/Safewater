@@ -57,7 +57,7 @@ const Donate = () => {
         <p className="text-xl opacity-90">Your contribution directly helps families in rural Malawi.</p>
       </div>
 
-      <div className="container mx-auto px-4 -mt-10 mb-20">
+      <div className="container mx-auto px-4 -mt-10 mb-20 relative z-10">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
           
           {/* Left Side: Info */}
