@@ -68,7 +68,7 @@ const defaultConfig: SiteConfig = {
     heroTitle: 'Clean Water & Good Health for All',
     heroSubtitle: 'Founded in 2004 to alleviate suffering in rural communities through safe water access, HIV/AIDS support, and healthcare.',
     heroButtonText: 'Support Our Cause',
-    heroImage: 'https://images.unsplash.com/photo-1532629345422-7515f3d16bb8?auto=format&fit=crop&q=80&w=1600', // People carrying containers
+    heroImage: 'https://images.unsplash.com/photo-1583321500900-82807e458f3c?auto=format&fit=crop&q=80&w=1600', // People carrying yellow containers on dirt road
     aboutTitle: 'About Our Mission',
     aboutText: 'Safe Water Organisation was founded by Larry Siegel in 2004 and handed over to Patrick Chimphamba in 2022. Rooted in humanitarian principles, we strive to alleviate suffering in rural communities through safe water access and health support.',
     aboutImage: 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&q=80&w=800', // African woman portrait

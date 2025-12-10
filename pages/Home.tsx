@@ -14,15 +14,15 @@ const Home = () => {
       <section className="relative min-h-[500px] md:min-h-[600px] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <EditableImage contentKey="heroImage" alt="Hero Background" className="w-full h-full" />
-          {/* Overlay increased to 85% opacity */}
+          {/* Overlay set to 85% opacity as requested */}
           <div className="absolute inset-0 bg-[#0f172a]/85"></div>
         </div>
         
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center py-16 md:py-24">
-          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-md leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-4 md:mb-6 drop-shadow-lg leading-tight">
             <EditableText contentKey="heroTitle" />
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-2">
+          <p className="text-lg md:text-xl text-gray-100 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed px-2 drop-shadow-md">
             <EditableText contentKey="heroSubtitle" multiline />
           </p>
           <Link to="/donate" className="inline-block bg-primary text-white font-bold py-3 px-6 md:py-4 md:px-8 rounded-full shadow-lg hover:bg-opacity-90 transition-all hover:scale-105 text-sm md:text-base">
