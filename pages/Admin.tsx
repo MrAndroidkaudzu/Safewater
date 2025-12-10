@@ -5,6 +5,7 @@ import {
   LayoutDashboard, FileText, Settings, LogOut, Plus, Trash2, Edit2, 
   Save, X, Lock, Image as ImageIcon, Briefcase, ChevronRight 
 } from 'lucide-react';
+import { Logo } from '../components/Logo';
 
 const Admin = () => {
   const { isAdmin, toggleAdmin, posts, addPost, updatePost, deletePost, projects, updateProject, config, updateConfig, updateContent } = useSite();
@@ -64,8 +65,8 @@ const Admin = () => {
       <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
         <div className="bg-white p-8 rounded-xl shadow-2xl max-w-md w-full">
           <div className="text-center mb-8">
-            <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
-              <Lock size={32} />
+            <div className="flex justify-center mb-4">
+               <Logo className="h-20 w-20 text-primary" tone="color" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Admin Login</h1>
             <p className="text-gray-500">Secure Area for Safe Water Management</p>
@@ -115,8 +116,11 @@ const Admin = () => {
       {/* Sidebar */}
       <aside className="w-64 bg-secondary text-white flex-shrink-0 hidden md:flex flex-col h-full overflow-y-auto">
         <div className="p-6 border-b border-gray-800 flex-shrink-0">
-          <h2 className="text-xl font-bold tracking-tight">Admin Console</h2>
-          <p className="text-xs text-gray-500 mt-1">Safe Water Org.</p>
+          <div className="flex items-center gap-2 mb-2">
+            <Logo className="h-6 w-6 text-primary" />
+            <h2 className="text-xl font-bold tracking-tight">Admin</h2>
+          </div>
+          <p className="text-xs text-gray-500">Safe Water Organisation</p>
         </div>
         
         <nav className="flex-grow p-4 space-y-2">
@@ -152,7 +156,10 @@ const Admin = () => {
         
         {/* Mobile Header */}
         <div className="md:hidden flex justify-between items-center p-4 bg-white border-b flex-shrink-0">
-          <h1 className="text-xl font-bold text-gray-900">Admin</h1>
+          <div className="flex items-center gap-2">
+             <Logo className="h-6 w-6 text-primary" />
+             <h1 className="text-xl font-bold text-gray-900">Admin</h1>
+          </div>
           <div className="flex gap-2">
              <select 
                value={activeTab} 

@@ -3,6 +3,7 @@ import { NavLink, Outlet, useLocation, Link } from 'react-router-dom';
 import { Menu, X, Heart, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 import { useSite } from '../context/SiteContext';
 import { EditableText } from './Editable';
+import { Logo } from './Logo';
 
 const Navbar = () => {
   const { config } = useSite();
@@ -20,9 +21,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-2">
-            <span className="text-primary font-bold text-2xl tracking-tight">{config.branding.name}</span>
-          </div>
+          <Link to="/" className="flex-shrink-0 flex items-center gap-3 group">
+            <Logo className="h-10 w-10 text-primary transition-transform group-hover:scale-110" />
+            <div className="flex flex-col leading-tight">
+               <span className="text-primary font-bold text-xl tracking-tight uppercase leading-none">Safe Water</span>
+               <span className="text-xs text-gray-500 font-medium tracking-widest">ORGANISATION</span>
+            </div>
+          </Link>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-8">
@@ -105,7 +110,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Brand & Mission */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold mb-4">{config.branding.name}</h3>
+            <div className="flex items-center gap-2 mb-4">
+               <Logo className="h-8 w-8 text-primary" tone="color" />
+               <span className="text-xl font-bold tracking-tight text-white">{config.branding.name}</span>
+            </div>
             <p className="text-gray-400 leading-relaxed mb-6">
               {config.branding.tagline}
             </p>
