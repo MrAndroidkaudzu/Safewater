@@ -12,7 +12,6 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -132,7 +131,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><NavLink to="/about" className="text-gray-400 hover:text-white transition-colors">About Us</NavLink></li>
               <li><NavLink to="/projects" className="text-gray-400 hover:text-white transition-colors">Our Projects</NavLink></li>
-              <li><NavLink to="/blog" className="text-gray-400 hover:text-white transition-colors">Latest News</NavLink></li>
               <li><NavLink to="/contact" className="text-gray-400 hover:text-white transition-colors">Contact</NavLink></li>
             </ul>
           </div>
@@ -176,9 +174,6 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
           <div><EditableText contentKey="footerText" /></div>
-          <div className="mt-4 md:mt-0">
-            <Link to="/admin" className="hover:text-white transition-colors opacity-50 hover:opacity-100">Admin Login</Link>
-          </div>
         </div>
       </div>
     </footer>

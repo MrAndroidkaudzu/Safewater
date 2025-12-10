@@ -33,12 +33,12 @@ const Donate = () => {
   if (status === 'success') {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
-        <div className="bg-white p-10 rounded-2xl shadow-xl max-w-lg w-full text-center">
-          <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-            <Check size={40} />
+        <div className="bg-white p-8 md:p-10 rounded-2xl shadow-xl max-w-lg w-full text-center">
+          <div className="w-16 h-16 md:w-20 md:h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+            <Check size={32} className="md:w-10 md:h-10" />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
-          <p className="text-gray-600 text-lg mb-8">Your donation of <span className="font-bold text-primary">${Number(amount).toFixed(2)}</span> will help us continue our vital work in Malawi.</p>
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Thank You!</h2>
+          <p className="text-gray-600 text-base md:text-lg mb-8">Your donation of <span className="font-bold text-primary">${Number(amount).toFixed(2)}</span> will help us continue our vital work in Malawi.</p>
           <button 
             onClick={() => setStatus('idle')}
             className="text-primary font-semibold hover:underline"
@@ -52,16 +52,16 @@ const Donate = () => {
 
   return (
     <div className="bg-white min-h-screen">
-      <div className="bg-secondary text-white py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">Support Our Mission</h1>
-        <p className="text-xl opacity-90">Your contribution directly helps families in rural Malawi.</p>
+      <div className="bg-secondary text-white py-12 md:py-16 text-center px-4">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">Support Our Mission</h1>
+        <p className="text-lg md:text-xl opacity-90 max-w-xl mx-auto">Your contribution directly helps families in rural Malawi.</p>
       </div>
 
-      <div className="container mx-auto px-4 -mt-10 mb-20 relative z-10">
-        <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 -mt-6 md:-mt-10 mb-12 md:mb-20 relative z-10">
+        <div className="max-w-5xl mx-auto bg-white rounded-xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
           
           {/* Left Side: Info */}
-          <div className="w-full md:w-5/12 bg-gray-50 p-8 border-r border-gray-100">
+          <div className="w-full md:w-5/12 bg-gray-50 p-6 md:p-8 border-r border-gray-100 order-2 md:order-1">
             <h3 className="font-bold text-lg mb-4 text-gray-800">Why We Need You</h3>
             
             <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6 text-sm text-yellow-800 flex gap-3">
@@ -88,7 +88,7 @@ const Donate = () => {
           </div>
 
           {/* Right Side: Form */}
-          <div className="w-full md:w-7/12 p-8">
+          <div className="w-full md:w-7/12 p-6 md:p-8 order-1 md:order-2">
             <form onSubmit={handleDonate}>
               <label className="block text-gray-700 font-bold mb-4">Choose Amount</label>
               
@@ -98,7 +98,7 @@ const Donate = () => {
                     key={val}
                     type="button"
                     onClick={() => handlePreset(val)}
-                    className={`py-3 rounded-lg font-bold border transition-all ${
+                    className={`py-3 rounded-lg font-bold border transition-all text-sm md:text-base ${
                       !isCustom && amount === val 
                         ? 'bg-primary border-primary text-white shadow-md' 
                         : 'bg-white border-gray-200 text-gray-600 hover:border-primary'
@@ -115,7 +115,7 @@ const Donate = () => {
                     value={isCustom ? amount : ''}
                     onFocus={handleCustomFocus}
                     onChange={(e) => setAmount(e.target.value)}
-                    className={`w-full h-full pl-6 pr-2 rounded-lg border font-bold outline-none transition-all ${
+                    className={`w-full h-full pl-6 pr-2 rounded-lg border font-bold outline-none transition-all text-sm md:text-base ${
                       isCustom 
                         ? 'border-primary ring-1 ring-primary' 
                         : 'border-gray-200'

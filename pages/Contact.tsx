@@ -4,7 +4,8 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 
 const Contact = () => {
   const { config } = useSite();
-  const [submitted, setSubmitted] = useState(false);
+  const submittedState = useState(false);
+  const [submitted, setSubmitted] = submittedState;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,32 +14,32 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="bg-gray-50 py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-secondary mb-4">Get in Touch</h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">Have questions about our projects or want to partner with us? We'd love to hear from you.</p>
+      <div className="bg-gray-50 py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-3xl md:text-4xl font-bold text-secondary mb-4">Get in Touch</h1>
+          <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg">Have questions about our projects or want to partner with us? We'd love to hear from you.</p>
         </div>
       </div>
 
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
           
           {/* Contact Info */}
-          <div>
+          <div className="order-2 md:order-1">
             <h2 className="text-2xl font-bold text-secondary mb-6">Contact Information</h2>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-full text-primary">
+                <div className="bg-blue-50 p-3 rounded-full text-primary flex-shrink-0">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email Us</h3>
-                  <p className="text-gray-600">{config.contact.email}</p>
+                  <p className="text-gray-600 break-all">{config.contact.email}</p>
                 </div>
               </div>
               
               <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-full text-primary">
+                <div className="bg-blue-50 p-3 rounded-full text-primary flex-shrink-0">
                   <Phone size={24} />
                 </div>
                 <div>
@@ -48,7 +49,7 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-blue-50 p-3 rounded-full text-primary">
+                <div className="bg-blue-50 p-3 rounded-full text-primary flex-shrink-0">
                   <MapPin size={24} />
                 </div>
                 <div>
@@ -65,9 +66,9 @@ const Contact = () => {
           </div>
 
           {/* Form */}
-          <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+          <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-100 order-1 md:order-2">
             {submitted ? (
-              <div className="text-center h-full flex flex-col justify-center items-center">
+              <div className="text-center h-full flex flex-col justify-center items-center py-8">
                 <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
                   <Send size={32} />
                 </div>
@@ -76,10 +77,10 @@ const Contact = () => {
                 <button onClick={() => setSubmitted(false)} className="mt-6 text-primary hover:underline">Send another message</button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <h2 className="text-2xl font-bold text-secondary">Send a Message</h2>
                 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-1">First Name</label>
                     <input required type="text" className="w-full border border-gray-300 rounded-lg p-3 focus:ring-2 focus:ring-primary/20 outline-none transition-shadow" />

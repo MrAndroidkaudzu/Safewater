@@ -1,13 +1,3 @@
-export interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  content: string;
-  date: string;
-  imageUrl: string;
-  author: string;
-}
-
 export interface Project {
   id: string;
   title: string;
@@ -62,15 +52,9 @@ export interface SiteConfig {
 }
 
 export interface AppContextType {
-  isAdmin: boolean;
-  toggleAdmin: () => void;
   config: SiteConfig;
   updateConfig: (section: keyof SiteConfig, data: Partial<SiteConfig[keyof SiteConfig]>) => void;
   updateContent: (key: keyof SiteConfig['content'], value: string) => void;
-  posts: BlogPost[];
-  addPost: (post: Omit<BlogPost, 'id'>) => void;
-  updatePost: (post: BlogPost) => void;
-  deletePost: (id: string) => void;
   projects: Project[];
   updateProject: (project: Project) => void;
 }
