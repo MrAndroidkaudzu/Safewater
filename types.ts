@@ -52,6 +52,7 @@ export interface SiteConfig {
     heroImage: string;
     aboutTitle: string;
     aboutText: string;
+    aboutImage: string;
     missionTitle: string;
     missionText: string;
     footerText: string;

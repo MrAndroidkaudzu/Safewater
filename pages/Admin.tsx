@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 
 const Admin = () => {
-  const { isAdmin, toggleAdmin, posts, addPost, updatePost, deletePost, projects, updateProject, config, updateConfig } = useSite();
+  const { isAdmin, toggleAdmin, posts, addPost, updatePost, deletePost, projects, updateProject, config, updateConfig, updateContent } = useSite();
   const [activeTab, setActiveTab] = useState<'posts' | 'projects' | 'settings'>('posts');
   
   // Login State
@@ -47,7 +47,7 @@ const Admin = () => {
     e.preventDefault();
     if (!editingPost) return;
 
-    const finalImage = editingPost.imageUrl || `https://picsum.photos/seed/${Date.now()}/800/400`;
+    const finalImage = editingPost.imageUrl || `https://images.unsplash.com/photo-1541913299752-59f5b69f6609?auto=format&fit=crop&q=80&w=800`;
     const postData = { ...editingPost, imageUrl: finalImage } as BlogPost;
 
     if (postData.id) {
@@ -389,6 +389,11 @@ const Admin = () => {
                   <div>
                     <label className="block text-sm font-bold text-gray-700 mb-1">Tagline</label>
                     <input type="text" value={config.branding.tagline} onChange={(e) => updateConfig('branding', { tagline: e.target.value })} className="w-full p-2 border rounded" />
+                  </div>
+                  <div className="md:col-span-2">
+                     <label className="block text-sm font-bold text-gray-700 mb-1">About Page Image</label>
+                     <input type="text" value={config.content.aboutImage} onChange={(e) => updateContent('aboutImage', e.target.value)} className="w-full p-2 border rounded" placeholder="https://..." />
+                     {config.content.aboutImage && <p className="text-xs text-gray-500 mt-1">Preview: This image will appear on the About page.</p>}
                   </div>
                 </div>
              </section>

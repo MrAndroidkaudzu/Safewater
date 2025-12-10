@@ -23,7 +23,7 @@ const About = () => {
           {/* Sidebar / Leadership */}
           <div className="w-full lg:w-1/3 space-y-8">
             <div>
-              <EditableImage contentKey="heroImage" alt="Our Team" className="rounded-xl shadow-xl mb-6 w-full h-64 object-cover" />
+              <EditableImage contentKey="aboutImage" alt="Our Team" className="rounded-xl shadow-xl mb-6 w-full h-64 object-cover" />
             </div>
 
             <div className="bg-blue-50 p-6 rounded-xl border border-blue-100 shadow-sm">

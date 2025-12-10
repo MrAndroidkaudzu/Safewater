@@ -63,7 +63,7 @@ const Home = () => {
                 </div>
              </div>
              <div className="w-full md:w-1/2 relative">
-                <img src="https://picsum.photos/seed/kids/800/600" alt="Mission" className="rounded-xl shadow-2xl" />
+                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&q=80&w=800" alt="Mission" className="rounded-xl shadow-2xl" />
                 <div className="absolute -bottom-6 -left-6 bg-primary p-8 rounded-lg text-white hidden md:block max-w-xs shadow-xl">
                    <p className="font-bold text-lg italic">"Water is the driving force of all nature."</p>
                 </div>
