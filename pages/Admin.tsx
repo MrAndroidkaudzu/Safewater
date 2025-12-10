@@ -48,7 +48,7 @@ const Admin = () => {
     e.preventDefault();
     if (!editingPost) return;
 
-    const finalImage = editingPost.imageUrl || `https://images.unsplash.com/photo-1541913299752-59f5b69f6609?auto=format&fit=crop&q=80&w=800`;
+    const finalImage = editingPost.imageUrl || `https://images.unsplash.com/photo-1531983412531-1f49a365ffed?auto=format&fit=crop&q=80&w=800`;
     const postData = { ...editingPost, imageUrl: finalImage } as BlogPost;
 
     if (postData.id) {
