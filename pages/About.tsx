@@ -40,7 +40,7 @@ const About = () => {
                   <span className="text-xs text-gray-500">Businesswoman, MSCE, Cert. in Evangelism</span>
                 </li>
                 <li className="flex flex-col">
-                  <span className="font-bold text-gray-900">Simuhalitsa Mapia</span>
+                  <span className="font-bold text-gray-900">Simkhalitsa Manda</span>
                   <span className="text-sm text-primary font-medium">Accountant</span>
                 </li>
               </ul>
